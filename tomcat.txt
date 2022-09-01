@@ -1,0 +1,18 @@
+*verifier l'appel des apis : apache-tomcat-8.5-RECRUTE\logs\localhost_access_log.2022-09-01.txt
+*verifier les logs de l'application qu'on a créée/affichage de la console et le demarrage de l'application : C:\Program Files\Apache Software Foundation\Tomcat 9.0\logs\tomcat9-stdout.2022-08-30.log
+*verifier le deploiement du war : C:\Program Files\Apache Software Foundation\Tomcat 9.0\logs\catalina.2022-08-31.log
+*savoir le port de tomcat : C:\Program Files\Apache Software Foundation\Tomcat 9.0\conf\server.xml
+la partie port dans le fichier server.xml :
+      <Connector port="8090" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+*deployer le war dans tomcat manuellement : poser le war dans le chemin C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps
+generation automatique d'un dossier qui porte le meme nom que le war (context) dans ce chemin 
+ -installer le service de tomcat depuis site de tomcat : https://tomcat.apache.org/download-90.cgi
+  Binary Distributions: 
+    *core : 32-bit/64-bit Windows Service Installer (pgp, sha512)
+ -verifier l'installation de tomcat: localhost:port dans le navigateur
+ -faire un clique droit sur demarrer -> executer -> saisir : services.msc -> ok -> chercher (Apache Tomcat 9.0 Tomcat9) -> clique droit arreter/demarrer service Apache Tomcat 9.0 Tomcat9
+	    
+
+			   
