@@ -1,0 +1,51 @@
+config 1:
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context sessionCookiePath="/" crossContext="true" cookies="true" cachingAllowed="false" reloadable="false">
+
+	
+
+
+
+    <Valve className="org.apache.catalina.valves.PersistentValve" />
+    <Manager saveOnRestart="true" className="org.apache.catalina.session.PersistentManager">
+        <Store className="org.apache.catalina.session.FileStore" directory="C:/Users/CSRA/Desktop/img/sessions"/>
+    </Manager>  
+
+      
+
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
+
+	<Resources antiResourceLocking="false" cachingAllowed="false" />
+	<ResourceLink auth="Container" global="jdbc/ConnectDb" name="jdbc/ConnectDb" type="javax.sql.DataSource"/>
+
+</Context>
+
+
+*******************************************************************************************************************
+config 2:
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context sessionCookiePath="/" crossContext="true">
+	
+	<Valve className="org.apache.catalina.valves.PersistentValve" />
+	
+	<Manager saveOnRestart="true" className="org.apache.catalina.session.PersistentManager">
+		<Store className="org.apache.catalina.session.FileStore"
+			directory="D:/ProcheckWebServer/PKSessions" />
+	</Manager>
+
+    <!-- Default set of monitored resources. If one of these changes, the    -->
+    <!-- web application will be reloaded.                                   -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
+    <!-- Uncomment this to disable session persistence across Tomcat restarts -->
+    <!--
+    <Manager pathname="" />
+    -->
+	<ResourceLink auth="Container" global="jdbc/ConnectDb" name="jdbc/ConnectDb" type="javax.sql.DataSource"/>
+
+</Context>
