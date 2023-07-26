@@ -1,7 +1,7 @@
 Pour garder la meme session dans les 2 applications
+Dans le chemin de l'installation de tomcat qui est le suivant : D:\tools\apache-tomcat-9.0.68\apache-tomcat-9.0.68\conf [server.xml]
+
 config 1 :
-
-
 <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="60000"
                redirectPort="8443" emptySessionPath="true" maxThreads="800" />
@@ -9,6 +9,5 @@ config 1 :
 
 config 2:
 par defaut
-
 
 <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
