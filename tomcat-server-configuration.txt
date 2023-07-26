@@ -1,3 +1,4 @@
+Pour garder la meme session dans les 2 applications
 config 1 :
 
 
