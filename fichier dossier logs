@@ -1,0 +1,15 @@
+Le dossier `logs` dans un serveur Apache Tomcat contient des fichiers journaux (logs) qui enregistrent différentes informations sur le fonctionnement du serveur. Voici la signification générale de certains fichiers courants que vous pourriez trouver dans ce dossier :
+
+1. **catalina.out** : Ce fichier contient les journaux de démarrage et d'arrêt de Tomcat, ainsi que les messages de journalisation de l'application web déployée. Il est souvent utilisé pour déboguer les problèmes de déploiement et d'exécution de l'application.
+
+2. **localhost.YYYY-MM-DD.log** : Ce fichier enregistre les journaux spécifiques à l'application déployée sur le contexte localhost. Le format du fichier est `localhost.<date>.log`.
+
+3. **host-manager.YYYY-MM-DD.log** : Ce fichier enregistre les journaux spécifiques à l'application de gestion des hôtes (host-manager) de Tomcat. Le format du fichier est `host-manager.<date>.log`.
+
+4. **manager.YYYY-MM-DD.log** : Ce fichier enregistre les journaux spécifiques à l'application de gestionnaire (manager) de Tomcat. Le format du fichier est `manager.<date>.log`.
+
+5. **localhost_access_log.YYYY-MM-DD.txt** : Ce fichier enregistre les journaux des accès HTTP à l'application déployée sur le contexte localhost. Il enregistre les demandes HTTP entrantes, y compris l'adresse IP du client, la date et l'heure de la demande, la méthode HTTP utilisée, l'URL demandée, le code de réponse HTTP, etc.
+
+6. **catalina.YYYY-MM-DD.log** : Ce fichier contient les journaux généraux de Tomcat pour la date spécifiée. Il enregistre les informations de démarrage, les erreurs du serveur, les tentatives de déploiement d'applications, etc.
+
+Les fichiers de journalisation peuvent varier en fonction de la configuration de votre serveur Tomcat et des applications déployées. Il est important de consulter ces fichiers en cas de problèmes ou pour surveiller le fonctionnement de votre serveur.
