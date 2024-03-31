@@ -1,0 +1,21 @@
+problématique :
+Je veux déployer un War Spring boot dans le serveur tomcat mais je veux qu'il utilise le fichier application.properties  externe au lieu d'utiliser l'application.properties qui existe dans le War . Dans le serveur tomcat ils existent++ War, pour cette configuration je veux l'utiliser pour ce War seulement
+solution :
+
+Pour déployer un WAR Spring Boot dans Tomcat en utilisant un fichier `application.properties` externe spécifique au WAR, vous pouvez suivre ces étapes :
+
+1. **Créez votre fichier `application.properties` externe :** Placez votre fichier `application.properties` externe dans un emplacement spécifique sur votre serveur, par exemple `/chemin/vers/mon/application.properties`.
+
+2. **Configurez le contexte du déploiement pour le WAR :** Créez un fichier de configuration XML dans le répertoire `conf/Catalina/localhost` de votre installation Tomcat avec le même nom que le WAR, mais avec l'extension `.xml`. Par exemple, si votre WAR s'appelle `monapplication.war`, créez un fichier `monapplication.xml` avec le contenu suivant :
+   ```xml
+   <Context>
+       <Parameter name="spring.config.location" value="file:/chemin/vers/mon/application.properties" override="false" />
+   </Context>
+   ```
+   Assurez-vous de remplacer `/chemin/vers/mon/application.properties` par le chemin réel de votre fichier `application.properties` externe.
+
+3. **Déployez votre WAR :** Copiez le fichier WAR dans le répertoire `webapps` de votre installation Tomcat.
+
+4. **Redémarrez Tomcat :** Redémarrez Tomcat pour appliquer les modifications.
+
+Avec cette configuration, Tomcat utilisera le fichier `application.properties` externe spécifié pour votre WAR uniquement, en ignorant le fichier `application.properties` qui se trouve à l'intérieur du WAR.
